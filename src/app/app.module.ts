@@ -17,9 +17,9 @@ import { CrisisCenterModule } from './crisis-center/crisis-center.module';
   declarations: [
     AppComponent,
     HighlightDirective,
+    FirstTimeVisitorComponent,
     TestComponent,
     TestPipe,
-    FirstTimeVisitorComponent,
     PageNotFoundComponent
   ],
   imports: [
@@ -32,6 +32,7 @@ import { CrisisCenterModule } from './crisis-center/crisis-center.module';
   ],
   providers: [],
   entryComponents: [FirstTimeVisitorComponent],
+  exports: [FirstTimeVisitorComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule {}
