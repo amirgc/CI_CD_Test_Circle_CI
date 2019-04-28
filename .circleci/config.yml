@@ -13,5 +13,7 @@ jobs:
           key: my-project-{{ .Branch }}-{{ checksum "package-lock.json" }}
           paths:
             - "node_modules"
+      - run: npm i --save-dev karma karma-chrome-launcher karma-mocha karma-chai
+      - run: npm i --save-dev mocha chai
       - run: npm run test -- --no-watch --no-progress --browsers=ChromeHeadlessCI
       - run: npm run e2e -- --protractor-config=e2e/protractor-ci.conf.js
